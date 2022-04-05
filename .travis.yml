@@ -3,8 +3,8 @@ language: node_js
 node_js:
   - '10'
 install:
-  - npm install
-  - npm run stop
+  - yarn install # npm ci
+  - yarn start
 deploy:
   provider: pages
   skip_cleanup: true
