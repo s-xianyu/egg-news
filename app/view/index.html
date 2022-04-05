@@ -1,0 +1,39 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-04-04 22:59:29
+ * @LastEditTime: 2022-04-05 17:51:15
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /egg-news/app/view/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer" />
+  <title>动漫星空</title>
+  <link rel="stylesheet" href="/public/css/index.css">
+</head>
+<body>
+  <h2><%=list.动漫星空%></h2>
+  <div>
+    <%for(var i=0;i<list.length;i++){%>
+    <a href="/details?url=<%=list[i].url%>">
+        <div class="list">
+          <div class="list-left">
+            <img src="<%=list[i].picUrl%>" alt="">
+          </div>
+          <div class="list-right">
+            <h2 class="title"><%=list[i].title%></h2>
+            <div class="content"><%=list[i].description%></div>
+            <span class="time">时间：<%=list[i].ctime%></span>
+          </div>
+        </div>
+      </a>
+    <%}%>
+  </ul>
+  <div class="footer">© 2022 egg.js by s-xianyu</div>
+</body>
+</html>
